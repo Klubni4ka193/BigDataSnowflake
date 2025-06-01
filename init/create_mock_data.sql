@@ -1,0 +1,60 @@
+CREATE TABLE raw_dataset (
+    row_id SERIAL PRIMARY KEY,
+    
+    cust_fname TEXT,
+    cust_lname TEXT,
+    cust_age INT,
+    cust_email TEXT,
+    cust_country TEXT,
+    cust_zip TEXT,
+    
+    pet_type_name TEXT,
+    pet_given_name TEXT,
+    pet_breed_name TEXT,
+    pet_category_name TEXT,
+    
+    agent_fname TEXT,
+    agent_lname TEXT,
+    agent_email TEXT,
+    agent_country TEXT,
+    agent_zip TEXT,
+    
+    item_title TEXT,
+    item_category TEXT,
+    item_price NUMERIC(10,2),
+    item_stock INT,
+    
+    tx_date DATE,
+    tx_cust_id INT,
+    tx_agent_id INT,
+    tx_item_id INT,
+    tx_quantity INT,
+    tx_total NUMERIC(10,2),
+    
+    outlet_name TEXT,
+    outlet_address TEXT,
+    outlet_city TEXT,
+    outlet_region TEXT,
+    outlet_country TEXT,
+    outlet_phone TEXT,
+    outlet_email TEXT,
+    
+    item_weight NUMERIC(10,2),
+    item_color TEXT,
+    item_size TEXT,
+    item_brand TEXT,
+    item_material TEXT,
+    item_desc TEXT,
+    item_rating NUMERIC(3,2),
+    item_reviews INT,
+    item_released DATE,
+    item_expires DATE,
+    
+    vendor_name TEXT,
+    vendor_contact TEXT,
+    vendor_email TEXT,
+    vendor_phone TEXT,
+    vendor_address TEXT,
+    vendor_city TEXT,
+    vendor_country TEXT
+);

@@ -1,16 +1,16 @@
-version: '3.8'
-
 services:
   db:
-    image: postgres:15
-    container_name: lab_postgres
-    restart: always
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 12345
-      POSTGRES_DB: pupupu
+    image: postgres:17
+    container_name: ABD_Lab1
+    restart: on-failure:5  
+    env_file:
+      - .env
     ports:
-      - "5433:5432"
+      - "5432:5432"
     volumes:
-      - ./pgdata:/var/lib/postgresql/data 
-      - ./mock_data:/mock_data 
+      - pg_data_lab1:/var/lib/postgresql/data  
+      - "./исходные данные:/data"
+      - ./init:/docker-entrypoint-initdb.d  
+
+volumes:
+  pg_data_lab1: 
